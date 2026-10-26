@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $source = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $outputs = Join-Path $source 'release'
-$version = '0.12.1'
+$version = '0.12.2'
 $nodeVersion = '24.14.0'
 $nodeArchiveName = "node-v$nodeVersion-win-x64.zip"
 $nodeSha256 = '313fa40c0d7b18575821de8cb17483031fe07d95de5994f6f435f3b345f85c66'

@@ -4,7 +4,7 @@ set -euo pipefail
 here=$(CDPATH= cd -- "$(dirname -- "$0")" && pwd -P)
 source_dir=$(CDPATH= cd -- "$here/.." && pwd -P)
 outputs="$source_dir/release"
-version=0.12.1
+version=0.12.2
 node_version=24.14.0
 node_name="node-v${node_version}-linux-x64.tar.xz"
 node_sha256=41cd79bb7877c81605a9e68ec4c91547774f46a40c67a17e34d7179ef11729df
