@@ -12,13 +12,16 @@ test('API locale : persistance, validation et protection des mutations', async (
   const dir = await mkdtemp(path.join(os.tmpdir(), 'dockertracer-test-'));
   const port = 14310;
   const bootstrapToken = 'a'.repeat(64);
+  const reopenToken = 'b'.repeat(64);
   // Deliberately point this contract test to an absent daemon. No real resources are created.
   const child = spawn(process.execPath, ['server/index.mjs', '--production'], {
     cwd: root,
     env: {
       ...process.env,
       PORT: String(port),
+      DTR_LOCAL_ACCESS_TOKEN: '',
       DTR_LOCAL_BOOTSTRAP_TOKEN: bootstrapToken,
+      DTR_LOCAL_REOPEN_TOKEN: reopenToken,
       DTR_DATA_DIR: dir,
       DOCKER_HOST:
         process.platform === 'win32'
@@ -60,6 +63,35 @@ test('API locale : persistance, validation et protection des mutations', async (
       (await fetch(base + '/api/state', { headers: { Cookie: 'dtr_access=' + bootstrapToken } }))
         .status,
       401,
+    );
+    const reopenUrl = base + '/_dtr/launcher/reopen';
+    assert.equal((await fetch(reopenUrl, { method: 'POST' })).status, 403);
+    assert.equal(
+      (
+        await fetch(reopenUrl, {
+          method: 'POST',
+          headers: { 'X-Docker-Tracer-Launcher': reopenToken, Origin: 'https://evil.example' },
+        })
+      ).status,
+      403,
+    );
+    const reopened = await fetch(reopenUrl, {
+      method: 'POST',
+      headers: { 'X-Docker-Tracer-Launcher': reopenToken },
+    });
+    assert.equal(reopened.status, 200);
+    const nextBootstrap = (await reopened.json()).bootstrapToken;
+    assert.match(nextBootstrap, /^[a-f0-9]{64}$/);
+    assert.notEqual(nextBootstrap, bootstrapToken);
+    assert.notEqual('dtr_access=' + nextBootstrap, cookie);
+    const reactivation = await fetch(base + '/?access=' + nextBootstrap, { redirect: 'manual' });
+    assert.equal(reactivation.status, 303);
+    assert.equal(reactivation.headers.get('set-cookie')?.split(';')[0], cookie);
+    assert.equal(
+      (await fetch(base + '/?access=' + bootstrapToken, { redirect: 'manual' })).headers.get(
+        'set-cookie',
+      ),
+      null,
     );
     const apiFetch = (url, options = {}) =>
       fetch(url, {

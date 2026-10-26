@@ -31,9 +31,10 @@ const production = process.argv.includes('--production');
 const localAccessToken =
   process.env.DTR_LOCAL_ACCESS_TOKEN || (production ? randomBytes(32).toString('hex') : '');
 const generatedBootstrapToken = !!localAccessToken && !process.env.DTR_LOCAL_BOOTSTRAP_TOKEN;
-const bootstrapToken =
+let bootstrapToken =
   process.env.DTR_LOCAL_BOOTSTRAP_TOKEN ||
   (localAccessToken ? randomBytes(32).toString('hex') : '');
+const reopenToken = process.env.DTR_LOCAL_REOPEN_TOKEN || '';
 let bootstrapAvailable = !!bootstrapToken;
 if (localAccessToken && !/^[a-f0-9]{64}$/i.test(localAccessToken))
   throw new Error('DTR_LOCAL_ACCESS_TOKEN doit contenir 64 caractères hexadécimaux.');
@@ -41,6 +42,16 @@ if (bootstrapToken && !/^[a-f0-9]{64}$/i.test(bootstrapToken))
   throw new Error('DTR_LOCAL_BOOTSTRAP_TOKEN doit contenir 64 caractères hexadécimaux.');
 if (bootstrapToken && bootstrapToken.toLowerCase() === localAccessToken.toLowerCase())
   throw new Error('Le jeton de démarrage doit être distinct du jeton de session locale.');
+if (reopenToken && !/^[a-f0-9]{64}$/i.test(reopenToken))
+  throw new Error('DTR_LOCAL_REOPEN_TOKEN doit contenir 64 caractères hexadécimaux.');
+if (
+  reopenToken &&
+  (!localAccessToken ||
+    [bootstrapToken, localAccessToken].some(
+      (token) => token.toLowerCase() === reopenToken.toLowerCase(),
+    ))
+)
+  throw new Error('Le jeton du lanceur doit être distinct des autres jetons locaux.');
 function matchesToken(value, expected) {
   if (typeof value !== 'string' || !/^[a-f0-9]{64}$/i.test(value)) return false;
   return timingSafeEqual(Buffer.from(value), Buffer.from(expected));
@@ -58,6 +69,19 @@ function hasAccessCookie(req) {
 app.use((req, res, next) => {
   if (!['127.0.0.1', 'localhost', '[::1]'].includes(req.hostname))
     return res.status(403).json({ error: 'Hôte non autorisé.' });
+  if (req.method === 'POST' && req.path === '/_dtr/launcher/reopen') {
+    res.setHeader('Cache-Control', 'no-store');
+    if (
+      req.headers.origin &&
+      !['http://127.0.0.1:' + port, 'http://localhost:' + port].includes(req.headers.origin)
+    )
+      return res.status(403).json({ error: 'Origine non autorisée.' });
+    if (!reopenToken || !matchesToken(req.headers['x-docker-tracer-launcher'], reopenToken))
+      return res.status(403).json({ error: 'Lanceur local requis.' });
+    bootstrapToken = randomBytes(32).toString('hex');
+    bootstrapAvailable = true;
+    return res.json({ bootstrapToken });
+  }
   if (
     bootstrapAvailable &&
     req.method === 'GET' &&

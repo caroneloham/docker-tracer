@@ -29,3 +29,4 @@ else
   echo 'Le serveur initial est deja arrete.'
 fi
 rm -- "$pid_file"
+rm -f -- "$root/data/server.reopen"
