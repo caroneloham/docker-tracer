@@ -23,13 +23,13 @@ New-Item -ItemType Directory -Force $dataDir | Out-Null
 $stdout = Join-Path $dataDir 'server.log'
 $stderr = Join-Path $dataDir 'server-error.log'
 $server = $null
-$env:DTR_LOCAL_ACCESS_TOKEN = $accessToken
+$env:DTR_LOCAL_BOOTSTRAP_TOKEN = $accessToken
 try {
   $server = Start-Process -FilePath $node -ArgumentList @('server/index.mjs', '--production') `
     -WorkingDirectory $PSScriptRoot -WindowStyle Hidden -PassThru `
     -RedirectStandardOutput $stdout -RedirectStandardError $stderr
 } finally {
-  Remove-Item Env:DTR_LOCAL_ACCESS_TOKEN -ErrorAction SilentlyContinue
+  Remove-Item Env:DTR_LOCAL_BOOTSTRAP_TOKEN -ErrorAction SilentlyContinue
 }
 
 try {

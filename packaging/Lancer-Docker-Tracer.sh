@@ -21,7 +21,7 @@ mkdir -p -- "$data"
 token=$("$node" -e "process.stdout.write(require('node:crypto').randomBytes(32).toString('hex'))")
 (
   cd -- "$root"
-  exec env DTR_LOCAL_ACCESS_TOKEN="$token" "$node" server/index.mjs --production >> "$data/server.log" 2>> "$data/server-error.log"
+  exec env DTR_LOCAL_BOOTSTRAP_TOKEN="$token" "$node" server/index.mjs --production >> "$data/server.log" 2>> "$data/server-error.log"
 ) &
 server_pid=$!
 
@@ -48,9 +48,14 @@ fi
 
 printf '%s\n' "$server_pid" > "$data/server.pid"
 access_url="$url/?access=$token"
+opened=0
 if [ "${DTR_NO_OPEN_BROWSER:-}" != 1 ] && command -v xdg-open >/dev/null 2>&1; then
-  xdg-open "$access_url" >/dev/null 2>&1 || true
+  if xdg-open "$access_url" >/dev/null 2>&1; then opened=1; fi
 fi
-printf 'Docker Tracer : %s\n' "$access_url"
+if [ "$opened" -eq 1 ]; then
+  printf 'Docker Tracer : %s\n' "$url"
+else
+  printf 'Ouvrez Docker Tracer : %s\n' "$access_url"
+fi
 printf 'Pour arreter le serveur : ./Fermer-Docker-Tracer.sh\n'
 printf 'Projets et journaux locaux : %s\n' "$data"

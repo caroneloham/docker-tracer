@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { spawn } from 'node:child_process';
+import { request as httpRequest } from 'node:http';
 import { mkdtemp, rm } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -10,14 +11,14 @@ test('API locale : persistance, validation et protection des mutations', async (
   const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
   const dir = await mkdtemp(path.join(os.tmpdir(), 'dockertracer-test-'));
   const port = 14310;
-  const accessToken = 'a'.repeat(64);
+  const bootstrapToken = 'a'.repeat(64);
   // Deliberately point this contract test to an absent daemon. No real resources are created.
   const child = spawn(process.execPath, ['server/index.mjs', '--production'], {
     cwd: root,
     env: {
       ...process.env,
       PORT: String(port),
-      DTR_LOCAL_ACCESS_TOKEN: accessToken,
+      DTR_LOCAL_BOOTSTRAP_TOKEN: bootstrapToken,
       DTR_DATA_DIR: dir,
       DOCKER_HOST:
         process.platform === 'win32'
@@ -43,14 +44,48 @@ test('API locale : persistance, validation et protection des mutations', async (
     });
     const base = `http://127.0.0.1:${port}`;
     assert.equal((await fetch(base + '/api/state')).status, 401);
-    const activation = await fetch(base + '/?access=' + accessToken, { redirect: 'manual' });
+    const activation = await fetch(base + '/?access=' + bootstrapToken, { redirect: 'manual' });
     assert.equal(activation.status, 303);
     const cookie = activation.headers.get('set-cookie')?.split(';')[0];
     assert.ok(cookie?.startsWith('dtr_access='));
-    const apiFetch = (url, options = {}) => fetch(url, {
-      ...options,
-      headers: { ...options.headers, Cookie: cookie },
+    assert.match(activation.headers.get('set-cookie'), /Max-Age=2592000/);
+    assert.notEqual(cookie, 'dtr_access=' + bootstrapToken);
+    assert.equal(
+      (await fetch(base + '/?access=' + bootstrapToken, { redirect: 'manual' })).headers.get(
+        'set-cookie',
+      ),
+      null,
+    );
+    assert.equal(
+      (await fetch(base + '/api/state', { headers: { Cookie: 'dtr_access=' + bootstrapToken } }))
+        .status,
+      401,
+    );
+    const apiFetch = (url, options = {}) =>
+      fetch(url, {
+        ...options,
+        headers: { ...options.headers, Cookie: cookie },
+      });
+    const wrongHostStatus = await new Promise((resolve, reject) => {
+      const request = httpRequest(
+        base + '/api/state',
+        {
+          headers: { Host: 'evil.example', Cookie: cookie },
+        },
+        (response) => {
+          response.resume();
+          resolve(response.statusCode);
+        },
+      );
+      request.on('error', reject);
+      request.end();
     });
+    assert.equal(wrongHostStatus, 403);
+    assert.equal(
+      (await apiFetch(base + '/api/events', { headers: { Origin: 'https://evil.example' } }))
+        .status,
+      403,
+    );
     const state = await (await apiFetch(base + '/api/state')).json();
     assert.equal(state.topology.nodes.length, 6);
     assert.equal(state.capabilities.applicationFiles, true);

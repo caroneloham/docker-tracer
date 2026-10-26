@@ -45,6 +45,17 @@ test('catalogue : chaque recette conserve une infrastructure Compose entièremen
     assert.ok(!project.compose.source.includes(defaults.password));
   }
 });
+test('catalogue : un service au nom hérité ne lit pas les propriétés du prototype', () => {
+  const source =
+    'services:\n  web:\n    image: nginx\nx-docker-tracer-catalog:\n  id: wordpress\n  access:\n    protocol: http\n    target: 80\n    service: constructor\n';
+  assert.doesNotThrow(() =>
+    catalogConnection({ source }, { connected: false, services: {} }, { kind: 'local' }),
+  );
+  assert.equal(
+    catalogConnection({ source }, { connected: true, services: {} }, { kind: 'local' }).url,
+    undefined,
+  );
+});
 test('catalogue : WordPress et MariaDB partagent seulement le réseau prévu, base non publiée', () => {
   const m = composeDocument(
     buildCatalogProject({ ...defaults, templateId: 'wordpress', exposure: 'network' }).compose

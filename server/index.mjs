@@ -27,27 +27,52 @@ function emit(event) {
 const app = express();
 app.disable('x-powered-by');
 const port = Number(process.env.PORT) || 4310;
-const generatedLocalAccessToken = !process.env.DTR_LOCAL_ACCESS_TOKEN && process.argv.includes('--production');
-const localAccessToken = process.env.DTR_LOCAL_ACCESS_TOKEN || (generatedLocalAccessToken ? randomBytes(32).toString('hex') : '');
+const production = process.argv.includes('--production');
+const localAccessToken =
+  process.env.DTR_LOCAL_ACCESS_TOKEN || (production ? randomBytes(32).toString('hex') : '');
+const generatedBootstrapToken = !!localAccessToken && !process.env.DTR_LOCAL_BOOTSTRAP_TOKEN;
+const bootstrapToken =
+  process.env.DTR_LOCAL_BOOTSTRAP_TOKEN ||
+  (localAccessToken ? randomBytes(32).toString('hex') : '');
+let bootstrapAvailable = !!bootstrapToken;
 if (localAccessToken && !/^[a-f0-9]{64}$/i.test(localAccessToken))
   throw new Error('DTR_LOCAL_ACCESS_TOKEN doit contenir 64 caractères hexadécimaux.');
-function matchesAccessToken(value) {
+if (bootstrapToken && !/^[a-f0-9]{64}$/i.test(bootstrapToken))
+  throw new Error('DTR_LOCAL_BOOTSTRAP_TOKEN doit contenir 64 caractères hexadécimaux.');
+if (bootstrapToken && bootstrapToken.toLowerCase() === localAccessToken.toLowerCase())
+  throw new Error('Le jeton de démarrage doit être distinct du jeton de session locale.');
+function matchesToken(value, expected) {
   if (typeof value !== 'string' || !/^[a-f0-9]{64}$/i.test(value)) return false;
-  return timingSafeEqual(Buffer.from(value), Buffer.from(localAccessToken));
+  return timingSafeEqual(Buffer.from(value), Buffer.from(expected));
 }
 function hasAccessCookie(req) {
   return (req.headers.cookie || '').split(';').some((part) => {
     const separator = part.indexOf('=');
-    return separator > 0 && part.slice(0, separator).trim() === 'dtr_access' && matchesAccessToken(part.slice(separator + 1).trim());
+    return (
+      separator > 0 &&
+      part.slice(0, separator).trim() === 'dtr_access' &&
+      matchesToken(part.slice(separator + 1).trim(), localAccessToken)
+    );
   });
 }
 app.use((req, res, next) => {
   if (!['127.0.0.1', 'localhost', '[::1]'].includes(req.hostname))
     return res.status(403).json({ error: 'Hôte non autorisé.' });
-  if (localAccessToken && req.method === 'GET' && req.path === '/' && matchesAccessToken(req.query.access)) {
+  if (
+    bootstrapAvailable &&
+    req.method === 'GET' &&
+    req.path === '/' &&
+    matchesToken(req.query.access, bootstrapToken)
+  ) {
+    bootstrapAvailable = false;
     res.setHeader('Cache-Control', 'no-store');
     res.setHeader('Referrer-Policy', 'no-referrer');
-    res.cookie('dtr_access', localAccessToken, { httpOnly: true, sameSite: 'strict', path: '/api' });
+    res.cookie('dtr_access', localAccessToken, {
+      httpOnly: true,
+      sameSite: 'strict',
+      path: '/api',
+      maxAge: 30 * 24 * 60 * 60 * 1000,
+    });
     return res.redirect(303, '/');
   }
   if (req.path.startsWith('/api')) {
@@ -120,16 +145,15 @@ app.use((error, _req, res, _next) => {
       : friendlyError(error);
 
   if (!res.headersSent)
-    res
-      .status(error instanceof z.ZodError ? 400 : error.statusCode || 500)
-      .json({
-        error: message,
-        ...(error.deploymentRun ? { deploymentRun: error.deploymentRun } : {}),
-      });
+    res.status(error instanceof z.ZodError ? 400 : error.statusCode || 500).json({
+      error: message,
+      ...(error.deploymentRun ? { deploymentRun: error.deploymentRun } : {}),
+    });
 });
 const server = app.listen(port, '127.0.0.1', () => {
   console.log(`Docker Tracer → http://127.0.0.1:${port}`);
-  if (generatedLocalAccessToken) console.log(`Ouvrez http://127.0.0.1:${port}/?access=${localAccessToken}`);
+  if (generatedBootstrapToken)
+    console.log(`Ouvrez http://127.0.0.1:${port}/?access=${bootstrapToken}`);
 });
 async function shutdown() {
   await workspace.shutdown();

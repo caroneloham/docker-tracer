@@ -12,7 +12,8 @@ export const serviceNetworks = composeServiceNetworks;
 
 function editableService(model, name, connecting = true) {
   const service = model.services?.[name];
-  if (!service) throw Error(`${name} est absent du fichier principal. Modifie son fichier source.`);
+  if (!Object.hasOwn(model.services || {}, name) || !service)
+    throw Error(`${name} est absent du fichier principal. Modifie son fichier source.`);
   if (service.extends)
     throw Error(`${name} hérite d’un autre fichier. Vérifie ses réseaux dans le fichier Compose.`);
   if (service.network_mode && !(connecting && service.network_mode === 'none'))
