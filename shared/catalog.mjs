@@ -1,6 +1,6 @@
 import YAML from 'yaml';
 import { z } from 'zod';
-import { composeSettings, composeDocument } from './compose-project.mjs';
+import { composeSettings, composeDocument, composeRuntimeInstances } from './compose-project.mjs';
 
 export const catalog = [
   {
@@ -206,7 +206,7 @@ export function catalogConnection(compose, runtime, host) {
     !Number.isInteger(access.target)
   )
     return null;
-  const instances = runtime?.services?.[access.service] || [];
+  const instances = composeRuntimeInstances(runtime?.services, access.service);
   const candidates = instances
     .filter((i) => i.state === 'running')
     .flatMap((i) =>

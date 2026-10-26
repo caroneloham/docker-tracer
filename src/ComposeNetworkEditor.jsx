@@ -1,6 +1,6 @@
 import React from 'react';
 import { Network, Plus, X } from 'lucide-react';
-import { composeServiceNetworks } from '../shared/compose-project.mjs';
+import { composeServiceNetworks, composeRuntimeInstances } from '../shared/compose-project.mjs';
 
 export default function ComposeNetworkEditor({ name, value, model, runtime, set }) {
   const visual = value['x-docker-tracer'] || {},
@@ -71,7 +71,7 @@ export default function ComposeNetworkEditor({ name, value, model, runtime, set 
           <div className="compose-network-member" key={service}>
             <strong>{service}</strong>
             <span>
-              {(runtime[service] || []).filter((i) => i.state === 'running').length} en marche
+              {composeRuntimeInstances(runtime, service).filter((i) => i.state === 'running').length} en marche
             </span>
           </div>
         ))}

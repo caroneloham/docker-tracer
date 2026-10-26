@@ -16,3 +16,4 @@ if ($process -and
   Write-Host 'Le serveur initial est déjà arrêté.'
 }
 Remove-Item -LiteralPath $pidFile -Force
+Remove-Item -LiteralPath (Join-Path $PSScriptRoot 'data\server.reopen') -Force -ErrorAction SilentlyContinue

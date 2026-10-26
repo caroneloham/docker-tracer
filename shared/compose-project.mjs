@@ -213,12 +213,15 @@ export function patchComposeObject(source, kind, name, field, value) {
   return doc.toString();
 }
 export function composeServiceNetworks(service = {}) {
-  if (service.network_mode) return {};
+  if (service.network_mode) return Object.create(null);
   const names = Array.isArray(service.networks)
     ? Object.fromEntries(service.networks.map((name) => [name, null]))
     : { ...(service.networks || {}) };
   // Compose treats omitted AND empty network declarations as the default network.
-  return Object.keys(names).length ? names : { default: null };
+  return Object.assign(Object.create(null), Object.keys(names).length ? names : { default: null });
+}
+export function composeRuntimeInstances(runtime, name) {
+  return Object.hasOwn(runtime || {}, name) && Array.isArray(runtime[name]) ? runtime[name] : [];
 }
 export function connectComposeNetwork(source, service, network, connected) {
   const { model } = composeDocument(source),
@@ -227,8 +230,9 @@ export function connectComposeNetwork(source, service, network, connected) {
   if (s.network_mode)
     throw Error('Retire d’abord le mode réseau spécial dans la configuration du service.');
   const nets = composeServiceNetworks(s);
-  if (connected) nets[network] ??= null;
-  else delete nets[network];
+  if (connected) {
+    if (!Object.hasOwn(nets, network)) nets[network] = null;
+  } else delete nets[network];
   if (!Object.keys(nets).length) {
     source = patchComposeService(source, service, 'networks', undefined);
     return patchComposeService(source, service, 'network_mode', 'none');
@@ -318,7 +322,7 @@ export function composeGraph(source, positions = {}, runtime = {}, resolved = nu
   services.forEach(([name, s], index) => {
     s ||= {};
     const id = 'service:' + name,
-      instances = runtime[name] || [];
+      instances = composeRuntimeInstances(runtime, name);
     nodes.push({
       id,
       type: 'composeDevice',

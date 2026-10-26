@@ -39,6 +39,22 @@ test('Compose : carte des réseaux configurés, sans liaison physique inventée'
   assert.equal(graph.edges[0].target, 'network:default');
   assert.throws(() => composeDocument('services:\n  a: {}\n  a: {}'), /unique|Map keys/);
 });
+test('Compose : les noms hérités de JavaScript restent des noms ordinaires', () => {
+  const input =
+    'services:\n  constructor:\n    image: nginx\n  web:\n    image: alpine\nnetworks:\n  __proto__: {}\n';
+  const graph = composeGraph(input);
+  assert.equal(
+    graph.nodes.find((node) => node.id === 'service:constructor').data.instances.length,
+    0,
+  );
+  const connected = connectComposeNetwork(input, 'web', '__proto__', true);
+  assert.ok(Object.hasOwn(composeDocument(connected).model.services.web.networks, '__proto__'));
+  const disconnected = connectComposeNetwork(connected, 'web', '__proto__', false);
+  assert.ok(
+    !Object.hasOwn(composeDocument(disconnected).model.services.web.networks || {}, '__proto__'),
+  );
+  assert.equal(composeGraph(disconnected).nodes.length, graph.nodes.length);
+});
 test('Compose : modifier le propriétaire d’une ancre ne modifie pas les autres services', () => {
   const source =
     'services:\n  first: &app\n    image: alpine\n    environment: &vars\n      A: original\n  second: *app\n  third:\n    image: nginx\n    environment: *vars\n';

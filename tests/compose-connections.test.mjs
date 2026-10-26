@@ -304,3 +304,10 @@ test('les réseaux vides signifient default dans la carte et chaque édition de 
     assert.equal(parse(isolated).services.web.network_mode, 'none');
   }
 });
+
+test('une propriété héritée ne devient pas un service Compose fantôme', () => {
+  assert.throws(
+    () => composeConnectionTarget(source, 'service:constructor', 'service:web'),
+    /absent du fichier principal/,
+  );
+});

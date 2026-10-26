@@ -67,6 +67,7 @@ import {
   addComposeObject,
   removeComposeObject,
   connectComposeNetwork,
+  composeRuntimeInstances,
 } from '../shared/compose-project.mjs';
 import './compose.css';
 import './browser.css';
@@ -575,20 +576,21 @@ function ObjectEditor({
   useEffect(() => setEditorSection(initialSection), [selected, initialSection]);
   const [kind, name] = selected.split(/:(.*)/s),
     section = kind === 'service' ? 'services' : kind === 'network' ? 'networks' : 'volumes',
-    value = model[section]?.[name] || {};
+    value = model[section]?.[name] || {},
+    instances = composeRuntimeInstances(runtime, name);
   const set = (field, v) => patch(section, name, field, v);
   if (!Object.hasOwn(model[section] || {}, name) && !(kind === 'network' && name === 'default'))
     return (
       <>
         <h2>{name}</h2>
         <p>
-          {runtime[name]?.length
+          {instances.length
             ? 'Ce service est encore déployé, mais il n’est pas déclaré dans le fichier Compose principal. Ses conteneurs restent gérables ci-dessous. Vérifie les fichiers inclus ou sa déclaration avant de modifier sa configuration.'
             : 'Cet équipement n’apparaît pas dans le fichier principal et aucun conteneur correspondant n’est détecté. Il a pu être retiré, renommé ou déclaré dans un fichier inclus. Sélectionne une autre machine sur la carte, ou consulte la configuration complète.'}
         </p>
-        {!!runtime[name]?.length && (
+        {!!instances.length && (
           <ServiceInstances
-            instances={runtime[name]}
+            instances={instances}
             onAction={onAction}
             onLogs={onLogs}
             onTools={onTools}
@@ -667,7 +669,7 @@ function ObjectEditor({
         <h2>{name}</h2>
       </div>
       <ServiceInstances
-        instances={runtime[name] || []}
+        instances={instances}
         onAction={onAction}
         onLogs={onLogs}
         onTools={onTools}
@@ -1858,12 +1860,12 @@ export default function ComposeWorkspace({
                     Tout sélectionner
                   </button>
                   {contextMenu.nodeId?.startsWith('service:') &&
-                    !!state.runtime.services[contextMenu.nodeId.slice(8)]?.length && (
+                    !!composeRuntimeInstances(state.runtime.services, contextMenu.nodeId.slice(8)).length && (
                       <button
                         role="menuitem"
                         type="button"
                         onClick={() => {
-                          const instances = state.runtime.services[contextMenu.nodeId.slice(8)];
+                          const instances = composeRuntimeInstances(state.runtime.services, contextMenu.nodeId.slice(8));
                           if (instances.length === 1)
                             setWorkbench({ container: instances[0], tab: 'terminal' });
                           else setInstanceChoice(instances);
