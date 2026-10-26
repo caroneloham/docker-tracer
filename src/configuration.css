@@ -1,0 +1,78 @@
+.config-file-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+.config-file-actions button {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 11px;
+  padding: 6px 8px;
+}
+.config-file-editor textarea {
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  line-height: 1.55;
+  min-height: 160px;
+  tab-size: 2;
+  white-space: pre;
+}
+.config-file-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+.config-file-footer button {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.proxy-settings {
+  border: 1px solid #b1c7d5;
+  background: #f1f6f9;
+  padding: 10px;
+  margin: 0 0 14px;
+}
+.proxy-settings > summary {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.proxy-preview {
+  max-height: 260px;
+  overflow: auto;
+  white-space: pre;
+  font-size: 11px;
+  background: #e9eff2;
+  padding: 10px;
+}
+.settings-tabs {
+  flex-wrap: wrap;
+}
+.startup-result {
+  padding: 10px;
+  border: 1px solid #bac5cb;
+  margin-bottom: 8px;
+}
+.startup-result h3,
+.startup-plan h3 {
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+.startup-result p,
+.startup-plan p {
+  font-size: 12px;
+}
+.startup-plan {
+  padding: 10px;
+  margin: 10px 0;
+  background: #edf4f8;
+  border: 1px solid #b1c7d5;
+}

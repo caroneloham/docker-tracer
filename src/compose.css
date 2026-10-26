@@ -1,0 +1,509 @@
+.compose-workspace {
+  height: 100dvh;
+  color: #233c4d;
+  background: #edf1f4;
+  font-size: 12px;
+}
+.compose-surface {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.compose-workspace button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 10px;
+  font: inherit;
+}
+.compose-header {
+  background: #17334d;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 18px;
+}
+.compose-header div {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+.compose-header strong {
+  font-size: 17px;
+}
+.compose-header span {
+  font-size: 12px;
+}
+.compose-toolbar,
+.compose-tabs {
+  display: flex;
+  gap: 5px;
+  padding: 7px 10px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #a8b9c4;
+  background: #f4f6f8;
+}
+.compose-tabs {
+  padding: 0 10px;
+  background: #e0e8ee;
+}
+.compose-tabs button {
+  border: 0;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 9px 12px;
+}
+.compose-tabs .active {
+  background: white;
+  border-bottom-color: #2677a8;
+}
+.compose-map-layout {
+  flex: 1;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 390px;
+}
+.compose-canvas {
+  position: relative;
+  background: white;
+  min-width: 0;
+}
+.compose-map-caption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  color: #617782;
+  background: #ffffffde;
+  padding: 6px;
+  pointer-events: none;
+}
+.compose-inspector {
+  padding: 16px;
+  overflow: auto;
+  scrollbar-gutter: stable;
+  min-width: 0;
+  border-left: 1px solid #bbc9d2;
+  background: #fafbfc;
+}
+.compose-editor-target {
+  color: #607a8a;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+  margin: 0 0 12px;
+}
+.compose-editor-heading > span {
+  display: block;
+  color: #607a8a;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+.compose-editor-heading h2 {
+  overflow-wrap: anywhere;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.compose-inspector .compose-editor-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 20px 0 10px;
+}
+.compose-editor-sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 16px;
+}
+.compose-editor-sections button {
+  border: 1px solid #b9cad4;
+  background: white;
+  min-height: 35px;
+  border-radius: 5px;
+}
+.compose-editor-sections button[aria-pressed='true'] {
+  background: #e1f0ef;
+  border-color: #17786f;
+  color: #12645d;
+  box-shadow: inset 0 0 0 1px #17786f;
+  font-weight: 600;
+}
+.compose-inspector .compose-editor-section[hidden] {
+  display: none;
+}
+.compose-editor-section > .compose-field-group {
+  padding-top: 0;
+  border-top: 0;
+  margin-top: 0;
+}
+.compose-inspector input:not([type='checkbox']),
+.compose-inspector select {
+  height: auto;
+  min-height: 36px;
+  line-height: 1.35;
+}
+.compose-inspector .compose-ai-shortcut {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  min-height: 40px;
+  background: #edf5f5;
+  border: 1px solid #b6d8d4;
+  color: #176c62;
+}
+.compose-instance-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.compose-instance strong {
+  overflow-wrap: anywhere;
+}
+.compose-health {
+  font-size: 10px;
+  color: #756120;
+}
+.compose-health.healthy {
+  color: #247546;
+}
+.compose-health.unhealthy {
+  color: #a44126;
+}
+.compose-instance-actions {
+  margin-bottom: 0;
+}
+.compose-instance-actions button {
+  flex: 1 1 auto;
+  min-height: 34px;
+}
+.compose-instance-empty {
+  color: #5b7180;
+  background: #edf3f6;
+  border-radius: 5px;
+  padding: 10px;
+}
+.compose-remove-section {
+  margin-top: 22px;
+  color: #647b87;
+}
+.compose-remove-section summary {
+  cursor: pointer;
+  padding: 9px 0;
+}
+.compose-editor-footer {
+  margin-top: 20px;
+  padding: 14px 0 0;
+  background: #fafbfc;
+  border-top: 1px solid #cbd9e1;
+}
+.compose-editor-footer p {
+  font-size: 11px;
+  margin: 5px 0;
+  color: #5b7180;
+}
+.compose-editor-footer .compose-buttons {
+  flex-direction: column;
+  margin-bottom: 0;
+}
+.compose-editor-footer button {
+  min-height: 37px;
+}
+.compose-inspector h2 {
+  font-size: 17px;
+  margin: 0 0 15px;
+}
+.compose-inspector h3 {
+  font-size: 13px;
+  margin: 0 0 9px;
+}
+.compose-workspace fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  min-width: 0;
+}
+.compose-workspace label,
+.compose-import label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.compose-workspace input,
+.compose-workspace select,
+.compose-workspace textarea,
+.compose-import input,
+.compose-import textarea {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  border: 1px solid #acbdc8;
+  background: white;
+  color: #233c4d;
+  font: inherit;
+  padding: 7px;
+  border-radius: 3px;
+}
+.compose-workspace textarea,
+.compose-import textarea {
+  font-family: Consolas, monospace;
+  line-height: 1.5;
+  resize: vertical;
+}
+.compose-import {
+  margin-top: 15px;
+}
+.compose-workspace .compose-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.compose-check input {
+  width: auto;
+}
+.compose-device {
+  width: 94px;
+  height: 95px;
+  padding: 0;
+  background: transparent;
+}
+.compose-device.selected {
+  background: transparent;
+}
+.compose-device .equipment-icon {
+  width: 60px;
+  height: 48px;
+}
+.compose-device small {
+  max-width: 135px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  color: #5b7180;
+}
+.compose-device strong {
+  max-width: 135px;
+  overflow-wrap: anywhere;
+  text-align: center;
+  font-size: 12px;
+}
+.compose-device span {
+  font-size: 10px;
+  margin-top: 4px;
+}
+.compose-device .live {
+  color: #247546;
+}
+.compose-device .idle {
+  color: #805c25;
+}
+.compose-device .react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+.compose-device:hover .react-flow__handle,
+.compose-device.selected .react-flow__handle {
+  opacity: 1;
+  background: #3c8e9c;
+  border: 1px solid white;
+}
+.compose-device .device-led {
+  margin: 0;
+}
+.compose-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.compose-field-group {
+  border-top: 1px solid #d1dbe1;
+  margin-top: 15px;
+  padding-top: 12px;
+}
+.compose-entry {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  background: #edf3f6;
+  padding: 5px;
+}
+.compose-entry code {
+  flex: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+}
+.compose-entry button {
+  padding: 3px;
+}
+.compose-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+.compose-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 9px 0;
+}
+.compose-value {
+  margin: 12px 0;
+}
+.compose-value summary {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 7px 0;
+}
+.compose-value button {
+  margin-top: 6px;
+}
+.compose-instance {
+  background: #eaf1f5;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+.compose-instance small {
+  display: block;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+.compose-palette {
+  background: #e5ebef;
+  border-top: 2px solid #17334d;
+  padding: 10px 14px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.compose-palette form {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+}
+.compose-palette .equipment-icon {
+  width: 48px;
+  height: 45px;
+}
+.compose-palette label {
+  margin: 0;
+}
+.compose-palette button {
+  height: 33px;
+}
+.compose-volume-list {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.compose-source,
+.compose-settings,
+.compose-history {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 20px;
+  background: #fafbfc;
+}
+.compose-source {
+  display: flex;
+  flex-direction: column;
+}
+.compose-source label {
+  flex: 1;
+  min-height: 150px;
+  grid-template-rows: auto 1fr;
+}
+.compose-source textarea {
+  resize: none;
+  min-height: 150px;
+  tab-size: 2;
+}
+.compose-settings fieldset {
+  max-width: 780px;
+}
+.compose-error {
+  background: #fff0e7;
+  color: #893b24;
+  padding: 10px;
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 160px;
+  overflow: auto;
+}
+.compose-notice {
+  padding: 9px 15px;
+  background: #e9f4ec;
+  color: #28633d;
+}
+.compose-progress {
+  position: fixed;
+  bottom: 100px;
+  left: 20px;
+  max-width: min(700px, 70vw);
+  z-index: 100;
+  background: #17334d;
+  color: white;
+  padding: 12px;
+  box-shadow: 0 2px 15px #0003;
+}
+.compose-progress pre {
+  max-height: 120px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+.compose-workspace p {
+  line-height: 1.5;
+}
+.compose-workspace .danger-button {
+  margin-top: 12px;
+}
+@media (max-width: 900px) {
+  .compose-map-layout {
+    grid-template-columns: minmax(250px, 1fr) 300px;
+  }
+  .compose-header {
+    align-items: flex-start;
+  }
+  .compose-header div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .compose-palette {
+    gap: 5px;
+  }
+  .compose-palette .equipment-icon {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .compose-map-layout {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+  .compose-canvas {
+    min-height: 350px;
+  }
+  .compose-inspector {
+    overflow: visible;
+  }
+  .compose-palette form {
+    flex-wrap: wrap;
+  }
+  .compose-header > span {
+    display: none;
+  }
+}

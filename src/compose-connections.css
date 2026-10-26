@@ -1,0 +1,323 @@
+.compose-canvas .compose-device .react-flow__handle {
+  width: 11px;
+  height: 11px;
+  opacity: 1;
+  background: #4c7a8c;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1px #4c7a8c;
+  cursor: crosshair;
+}
+.compose-canvas.connection-mode .compose-device .react-flow__handle {
+  width: 16px;
+  height: 16px;
+  background: #147bb8;
+  box-shadow: 0 0 0 3px #d9edf8;
+}
+.compose-canvas.connection-mode .compose-device {
+  cursor: crosshair;
+}
+.connection-start .compose-device {
+  outline: 3px solid #147bb8;
+  outline-offset: 5px;
+}
+.compose-connection-toolbar {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  pointer-events: none;
+}
+.compose-connection-toolbar > * {
+  pointer-events: auto;
+}
+.compose-connection-toolbar button,
+.compose-connection-toolbar span {
+  background: #fff;
+  border: 1px solid #c9d8e1;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 12px;
+}
+.compose-connection-toolbar button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+.compose-connection-toolbar button[aria-pressed='true'],
+.compose-connection-actions button[aria-pressed='true'] {
+  background: #e4f2fc;
+  border-color: #147bb8;
+  color: #115780;
+}
+.compose-connection-toolbar span {
+  max-width: 430px;
+  line-height: 1.4;
+}
+.compose-connection-dialog fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.compose-connection-dialog {
+  color: #244255;
+}
+.compose-connection-route {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.compose-connection-endpoint {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+  min-height: 74px;
+  padding: 10px;
+  border: 1px solid #d4dfe6;
+  border-radius: 7px;
+  background: #fff;
+}
+.compose-connection-endpoint .equipment-icon {
+  width: 42px;
+  height: 38px;
+}
+.compose-connection-endpoint > div {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+.compose-connection-endpoint strong {
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+.compose-connection-endpoint small,
+.compose-connection-endpoint div > span {
+  font-size: 10px;
+  color: #667f90;
+}
+.compose-connection-direction {
+  color: #287bad;
+}
+.compose-connection-intro {
+  margin: 10px 0 16px;
+  color: #5d7484;
+}
+.compose-connection-controls > legend {
+  margin-bottom: 8px;
+  font-weight: 650;
+  font-size: 12px;
+}
+.compose-network-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  max-height: 220px;
+  overflow: auto;
+  padding: 2px;
+}
+.compose-connection-dialog .compose-network-option {
+  display: grid;
+  grid-template-columns: 14px 20px minmax(0, 1fr);
+  column-gap: 7px;
+  row-gap: 5px;
+  align-items: center;
+  padding: 10px;
+  min-height: 70px;
+  border: 1px solid #c7d6df;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+}
+.compose-connection-dialog .compose-network-option.is-selected {
+  border-color: #2476a6;
+  box-shadow: inset 0 0 0 1px #2476a6;
+  background: #edf6fc;
+}
+.compose-connection-dialog .compose-network-option:focus-within {
+  outline: 2px solid #2476a6;
+  outline-offset: 1px;
+}
+.compose-connection-dialog .compose-network-option input {
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  margin: 0;
+  accent-color: #2476a6;
+}
+.compose-network-option > span {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.compose-network-option small {
+  font-size: 10px;
+  line-height: 1.4;
+  color: #5c7585;
+}
+.compose-network-option em {
+  grid-column: 3;
+  justify-self: start;
+  font-style: normal;
+  font-size: 9px;
+  color: #24634e;
+}
+.compose-new-network-name,
+.compose-detach-service {
+  margin-top: 10px;
+}
+.compose-connection-existing {
+  padding: 10px 12px;
+  margin-top: 12px;
+  background: #eaf4ee;
+  border: 1px solid #c2dacb;
+  border-radius: 5px;
+}
+.compose-connection-existing.is-disconnecting {
+  background: #fff4e9;
+  border-color: #ddc6ae;
+}
+.compose-connection-existing p {
+  margin: 0 0 5px;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+}
+.compose-connection-existing p:first-child {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.compose-connection-advanced {
+  margin-top: 12px;
+  border-top: 1px solid #d5e0e6;
+  border-bottom: 1px solid #d5e0e6;
+}
+.compose-connection-advanced summary {
+  padding: 10px 2px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.compose-connection-advanced summary > svg {
+  margin: 0 5px -2px 2px;
+}
+.compose-connection-advanced summary > span {
+  margin-left: 8px;
+  font-weight: 400;
+  color: #6c8190;
+}
+.compose-connection-advanced .compose-field-group {
+  margin: 8px 0 12px;
+  padding-top: 6px;
+}
+.compose-connection-advanced h3 {
+  margin: 4px 0 8px;
+  font-size: 12px;
+}
+.compose-connection-dialog label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+}
+.compose-connection-dialog input,
+.compose-connection-dialog select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #c9d8e1;
+  border-radius: 4px;
+}
+.compose-connection-fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+.compose-connection-actions {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 0;
+  flex-wrap: wrap;
+}
+.compose-connection-actions button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.compose-connection-preview {
+  margin: 12px 0;
+  padding: 0;
+  font-size: 11px;
+}
+.compose-connection-preview ul {
+  padding-left: 18px;
+  margin: 6px 0;
+}
+.compose-connection-preview p {
+  margin: 4px 0;
+  color: #627b8c;
+}
+.compose-connection-preview li {
+  margin: 5px 0;
+}
+.compose-connection-next {
+  font-size: 10px;
+  color: #627b8c;
+}
+.compose-connection-disconnect-note {
+  color: #855320;
+  font-size: 11px;
+}
+.compose-connection-submit {
+  position: sticky;
+  bottom: -20px;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 12px 0 4px;
+  margin-top: 10px;
+  background: #f7f8f9;
+  border-top: 1px solid #d5e0e6;
+}
+.compose-connection-submit button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+}
+.compose-connection-submit > button:first-child {
+  margin-right: auto;
+}
+.compose-connection-dialog fieldset:disabled .compose-network-option {
+  opacity: 0.6;
+  cursor: default;
+}
+@media (max-width: 700px) {
+  .compose-connection-fields {
+    grid-template-columns: 1fr;
+  }
+  .compose-connection-toolbar span {
+    max-width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .compose-connection-route {
+    gap: 5px;
+  }
+  .compose-connection-endpoint {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px;
+  }
+  .compose-network-options {
+    grid-template-columns: 1fr;
+  }
+  .compose-connection-submit > button:last-child {
+    width: 100%;
+  }
+}

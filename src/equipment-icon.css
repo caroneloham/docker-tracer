@@ -1,0 +1,18 @@
+.equipment-icon.equipment-brand-icon {
+  object-fit: contain;
+  padding: 3px 7px;
+  box-sizing: border-box;
+  pointer-events: none;
+  color-scheme: light;
+}
+
+.image-picker .equipment-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.image-picker-starters .equipment-icon {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+}

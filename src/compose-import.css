@@ -1,0 +1,180 @@
+.compose-import-flow {
+  color: #183d55;
+  display: grid;
+  gap: 16px;
+}
+.compose-import-drop {
+  border: 2px dashed #a8c5d8;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  background: #f5fafc;
+}
+.compose-import-drop strong {
+  overflow-wrap: anywhere;
+}
+.compose-import-drop span {
+  color: #557084;
+  font-size: 12px;
+}
+.compose-import-drop button {
+  margin-left: auto;
+}
+.compose-import-drop.dragging {
+  border-color: #17685f;
+  background: #eaf6f2;
+}
+.compose-import-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+.compose-import-flow label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  min-width: 0;
+}
+.compose-import-flow input:not([type='checkbox']),
+.compose-import-flow select {
+  min-height: 38px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 7px 9px;
+}
+.compose-import-flow button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 36px;
+}
+.compose-import-summary h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+}
+.compose-import-table {
+  overflow-x: auto;
+  max-height: 300px;
+  border: 1px solid #ccdce5;
+  border-radius: 5px;
+}
+.compose-import-table table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: left;
+}
+.compose-import-table th {
+  background: #ecf3f8;
+  position: sticky;
+  top: 0;
+}
+.compose-import-table td,
+.compose-import-table th {
+  padding: 9px 10px;
+  border-bottom: 1px solid #e0e9ef;
+  overflow-wrap: anywhere;
+  max-width: 240px;
+}
+.compose-import-table small {
+  display: block;
+  color: #60788a;
+}
+.compose-import-files {
+  background: #fff9eb;
+  padding: 12px;
+  border-left: 3px solid #d6a843;
+  font-size: 13px;
+}
+.compose-import-flow p {
+  margin: 0;
+  line-height: 1.5;
+}
+.compose-import-flow ul {
+  margin: 8px 0;
+  padding-left: 20px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.compose-import-options {
+  border: 1px solid #d0dee8;
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.compose-import-options summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+.compose-import-options[open] summary {
+  margin-bottom: 12px;
+}
+.compose-import-options textarea {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 150px;
+  resize: vertical;
+  font-family: ui-monospace, monospace;
+  font-size: 12px;
+  padding: 10px;
+}
+.compose-import-options label + label {
+  margin-top: 10px;
+}
+.compose-import-flow .compose-import-check {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.compose-import-note,
+.compose-import-options small {
+  color: #557084;
+  font-size: 12px;
+}
+.compose-import-error {
+  padding: 10px;
+  color: #9d2e25;
+  background: #fff0ed;
+  border-left: 3px solid #c5493c;
+  overflow-wrap: anywhere;
+}
+.compose-import-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+.compose-global-drop {
+  position: fixed;
+  inset: 8px;
+  z-index: 180;
+  border: 3px dashed #17685f;
+  background: #f1fbf6f5;
+  color: #124b46;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 18px;
+}
+.compose-global-drop span {
+  font-size: 14px;
+}
+@media (max-width: 640px) {
+  .compose-import-grid {
+    grid-template-columns: 1fr;
+  }
+  .compose-import-actions button {
+    flex: 1 1 100%;
+  }
+  .compose-import-drop button {
+    margin-left: 0;
+  }
+}

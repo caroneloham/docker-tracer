@@ -1,0 +1,185 @@
+.docker-terminal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+  min-height: 330px;
+  background: #102332;
+  border: 1px solid #23485e;
+  border-radius: 7px;
+  overflow: hidden;
+  color: #e2edf4;
+}
+.docker-terminal[hidden] {
+  display: none !important;
+}
+.docker-terminal-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 9px 11px;
+  background: #183447;
+  border-bottom: 1px solid #315367;
+}
+.docker-terminal-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #c0d2df;
+  white-space: nowrap;
+}
+.docker-terminal-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #8296a4;
+}
+.docker-terminal-status.connected i {
+  background: #66d6ab;
+}
+.docker-terminal-status.error i {
+  background: #f18880;
+}
+.docker-terminal-status.connecting i {
+  background: #e6bd69;
+}
+.docker-terminal-toolbar label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #bdcfdd;
+}
+.docker-terminal .docker-terminal-toolbar select {
+  min-height: 28px;
+  padding: 3px 6px;
+  border: 1px solid #426074;
+  border-radius: 4px;
+  background: #102b3b;
+  color: #e2edf4;
+  font-size: 11px;
+}
+.docker-terminal-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-left: auto;
+}
+.docker-terminal .docker-terminal-actions button {
+  min-height: 29px;
+  padding: 5px 7px;
+  gap: 5px;
+  border: 1px solid #426074;
+  border-radius: 4px;
+  background: #223f52;
+  color: #e4eef4;
+  font-size: 11px;
+}
+.docker-terminal .docker-terminal-actions button:hover:not(:disabled) {
+  background: #31556b;
+  border-color: #6c98af;
+}
+.docker-terminal .docker-terminal-actions button:disabled {
+  opacity: 0.45;
+  color: #bdcfdd;
+}
+.docker-terminal-screen {
+  flex: 1;
+  min-height: 220px;
+  height: 420px;
+  min-width: 0;
+  overflow: hidden;
+  padding: 10px 12px;
+  background: #102332;
+}
+.docker-terminal-screen > .xterm {
+  height: 100%;
+}
+.docker-terminal .xterm textarea.xterm-helper-textarea {
+  min-height: 0 !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  outline: none !important;
+  font: inherit !important;
+  resize: none !important;
+}
+.docker-terminal .xterm-viewport {
+  scrollbar-color: #44677e #102332;
+}
+.docker-terminal-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 5px 14px;
+  font-size: 10px;
+  padding: 8px 11px;
+  color: #9eb7c9;
+  border-top: 1px solid #29485b;
+}
+.docker-terminal-message {
+  margin: 0;
+  padding: 8px 12px;
+  color: #c6dbe9;
+  background: #1b394c;
+  border-bottom: 1px solid #315367;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.docker-terminal-help {
+  width: 100%;
+}
+.docker-terminal-help summary {
+  cursor: pointer;
+  width: fit-content;
+}
+.docker-terminal-help p {
+  margin: 6px 0 0;
+  max-width: 75ch;
+  line-height: 1.5;
+}
+.docker-terminal-message.error {
+  background: #492e32;
+  color: #ffccc7;
+}
+.docker-terminal-compact .docker-terminal-screen {
+  height: 320px;
+  min-height: 180px;
+}
+.docker-terminal-compact .docker-terminal-toolbar {
+  gap: 7px;
+  padding: 7px;
+}
+.docker-terminal-compact .docker-terminal-footer {
+  font-size: 9px;
+}
+.docker-terminal.docker-terminal-expanded {
+  position: fixed;
+  inset: 14px;
+  z-index: 1800;
+  box-shadow: 0 20px 90px #081926aa;
+  min-height: 0;
+}
+.docker-terminal-expanded .docker-terminal-screen {
+  height: 0;
+  min-height: 0;
+}
+@media (max-width: 700px) {
+  .docker-terminal-toolbar {
+    gap: 7px;
+  }
+  .docker-terminal-actions {
+    margin-left: 0;
+  }
+  .docker-terminal-screen {
+    height: 350px;
+    padding: 8px;
+  }
+  .docker-terminal.docker-terminal-expanded {
+    inset: 5px;
+  }
+}

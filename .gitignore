@@ -1,0 +1,31 @@
+# Dependencies and builds
+node_modules/
+dist/
+dist-browser/
+dist-viewer/
+coverage/
+release/
+packaging/stage-*/
+packaging/stage-linux.*/
+
+# Local state, exports, and credentials
+.env
+.env.*
+!.env.example
+data/
+output/
+outputs/
+backups/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Editor and system files
+.idea/
+.vscode/
+.DS_Store

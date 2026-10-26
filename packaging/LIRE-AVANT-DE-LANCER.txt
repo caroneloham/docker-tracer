@@ -1,0 +1,30 @@
+DOCKER TRACER 0.12.1 — Windows x64
+
+1. Extraire TOUTE l'archive ZIP dans un dossier où vous avez le droit d'écrire,
+   par exemple Documents\Docker Tracer. Ne pas lancer depuis la prévisualisation du ZIP.
+2. Démarrer Docker Desktop en mode conteneurs Linux.
+3. Double-cliquer sur Docker-Tracer.cmd. L'interface s'ouvre dans le navigateur
+   à l'adresse http://127.0.0.1:4310.
+
+Node.js est inclus dans l'archive. Aucun compte AutoDocker n'est requis.
+Docker Tracer fonctionne sur ce PC et communique avec votre moteur Docker local
+ou avec les hôtes Linux SSH que vous configurez explicitement. Il n'est pas
+destiné à être exposé sur Internet. Pour les déploiements Compose locaux,
+Docker CLI et Docker Compose doivent être installés et accessibles sur le PC.
+Un jeton d'accès local aléatoire est créé à chaque démarrage. Le navigateur
+est ouvert automatiquement avec ce jeton. Ne partagez pas cette adresse.
+
+Les projets, journaux et réglages locaux se trouvent dans le dossier data,
+créé à côté du lanceur. Gardez ce dossier privé : il peut contenir des
+configurations et identifiants de vos infrastructures. Pour fermer le serveur,
+double-cliquez sur Fermer-Docker-Tracer.cmd avant de déplacer ou supprimer
+l'application.
+
+L'atelier en ligne sur autodocker.eu permet d'éditer une déclaration Compose
+dans le navigateur, sans état Docker ni déploiement réel. Cette archive
+contient l'application Docker Tracer complète, avec serveur local.
+
+Les licences et sources des pictogrammes inclus figurent dans notices\brands.
+Le code Docker Tracer est soumis à la licence fournie dans LICENSE : usage et
+modification permis, revente du logiciel ou accès payant interdits. Cette
+licence de code source accessible n'est pas une licence open source OSI.

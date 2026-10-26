@@ -1,0 +1,360 @@
+.workspace-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #152a414d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.workspace-dialog {
+  width: 620px;
+  max-width: 100%;
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8f9;
+  border: 1px solid #456278;
+  box-shadow: 0 12px 45px #10283c38;
+}
+.workspace-dialog.wide {
+  width: 880px;
+}
+.workspace-dialog .aside-heading {
+  flex-shrink: 0;
+}
+.workspace-dialog-body {
+  padding: 20px;
+  overflow: auto;
+  font-size: 12px;
+}
+.workspace-dialog p {
+  line-height: 1.6;
+}
+.workspace-dialog h2 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.workspace-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+.workspace-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+}
+.workspace-form input,
+.workspace-form select {
+  min-height: 30px;
+  width: 100%;
+}
+.workspace-form small {
+  color: #63798a;
+  line-height: 1.5;
+}
+.workspace-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 0;
+}
+.workspace-actions button,
+.workspace-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.workspace-notice {
+  border: 1px solid #b6c7d3;
+  background: #edf3f7;
+  padding: 12px;
+  margin: 12px 0;
+  overflow-wrap: anywhere;
+}
+.workspace-notice.passed {
+  background: #eef6ef;
+  border-color: #b5cbb6;
+}
+.host-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 12px 0;
+}
+.host-list > button {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  padding: 9px;
+}
+.host-list > button > span:nth-child(2) {
+  flex: 1;
+}
+.host-list small,
+.workspace-table-scroll small {
+  display: block;
+  color: #607487;
+  margin-top: 3px;
+}
+.host-list .active {
+  background: #deedf6;
+  border-color: #6189a3;
+}
+.result-state {
+  display: inline-block;
+  border: 1px solid #b4bec7;
+  background: #e9eef1;
+  color: #456070;
+  border-radius: 2px;
+  font-size: 10px;
+  padding: 2px 6px;
+  white-space: nowrap;
+}
+.result-state.passed {
+  background: #e5f2e5;
+  border-color: #9cbd9b;
+  color: #326536;
+}
+.result-state.failed {
+  background: #fbe7e2;
+  border-color: #cc9b8e;
+  color: #9b3c2b;
+}
+.result-state.inconclusive {
+  background: #fff3d9;
+  border-color: #cbb276;
+  color: #806228;
+}
+.result-state.running {
+  background: #deedf8;
+  border-color: #8fb3ce;
+  color: #285b85;
+}
+.run-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.run-comparison {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 10px;
+  background: #edf2f6;
+  border: 1px solid #bac8d2;
+}
+.run-comparison small {
+  width: 100%;
+  color: #627487;
+}
+.diagnostic-steps {
+  margin: 15px 0;
+}
+.diagnostic-steps details {
+  border-bottom: 1px solid #d0d7dd;
+  padding: 10px 0;
+}
+.diagnostic-steps summary {
+  cursor: pointer;
+  line-height: 1.6;
+}
+.diagnostic-steps summary .result-state {
+  margin-right: 8px;
+}
+.workspace-dialog pre,
+.container-logs {
+  background: #fff;
+  border: 1px solid #c7cfd7;
+  padding: 10px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 11px;
+  max-height: 220px;
+  overflow: auto;
+}
+.workspace-table-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+.workspace-table-scroll td {
+  white-space: normal !important;
+}
+.workspace-table-scroll td:last-child {
+  min-width: 180px;
+}
+.workspace-table-scroll button {
+  font-size: 10px;
+  padding: 2px 6px;
+  margin: 2px;
+  min-height: 22px;
+}
+.workspace-tabs {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+}
+.workspace-tabs button {
+  font-size: 10px;
+  min-height: 24px;
+}
+.workspace-tabs button.active {
+  background: white;
+  border-bottom-color: white;
+}
+.workspace-history {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 6px;
+  overflow: auto;
+}
+.workspace-history > button {
+  text-align: left;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px;
+}
+.capture-packets {
+  max-height: 330px;
+  overflow: auto;
+  margin-top: 10px;
+}
+.capture-packets td {
+  cursor: pointer;
+}
+.capture-packets small {
+  display: block;
+  color: #887144;
+}
+.container-workspace-actions {
+  border-top: 1px solid #cad3da;
+  margin-top: 12px;
+  padding-top: 7px;
+}
+.container-workspace-actions button {
+  font-size: 10px;
+}
+.host-tree {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  z-index: 5;
+  background: #f5f7f9ed;
+  border-right: 1px solid #ccd6df;
+  overflow: auto;
+  padding: 8px;
+  font-size: 11px;
+}
+.host-tree > details {
+  margin-bottom: 9px;
+}
+.host-tree summary {
+  cursor: pointer;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.host-tree button {
+  border: 0;
+  background: transparent;
+  display: block;
+  text-align: left;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  min-height: 24px;
+  padding-left: 12px;
+}
+.host-tree .host-state {
+  font-size: 9px;
+  font-weight: 400;
+  color: #708294;
+  display: block;
+}
+.host-tree .host-state.offline,
+.host-tree .host-state.changed-key {
+  color: #a44130;
+}
+.inventory-canvas.with-host-tree > .react-flow {
+  margin-left: 180px;
+  width: calc(100% - 180px);
+}
+.inventory-layers {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 10px;
+}
+.inventory-layers label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.observed-envelope {
+  cursor: pointer;
+  pointer-events: visiblePainted;
+}
+.inventory-device.is-stale {
+  opacity: 0.55;
+}
+.workspace-dialog button:disabled {
+  cursor: default;
+}
+.workspace-packet-toolbar {
+  margin-bottom: 8px;
+}
+.workspace-suggest-checks {
+  padding: 8px;
+  border: 1px solid #bed1b9;
+  background: #eff6ec;
+  margin: 8px;
+}
+.workspace-suggest-checks button {
+  margin: 3px;
+  font-size: 10px;
+}
+.with-host-tree .inventory-map-note {
+  left: 190px;
+}
+.with-host-tree .inventory-empty {
+  left: 180px;
+}
+.inventory-device.is-stale .device-led {
+  background: #9ca5ac;
+}
+@media (max-width: 900px) {
+  .host-tree {
+    width: 125px;
+  }
+  .inventory-canvas.with-host-tree > .react-flow {
+    margin-left: 125px;
+    width: calc(100% - 125px);
+  }
+  .with-host-tree .inventory-map-note {
+    left: 135px;
+  }
+  .with-host-tree .inventory-empty {
+    left: 125px;
+  }
+  .inventory-toolbar {
+    flex-wrap: wrap;
+  }
+  .workspace-dialog-body {
+    padding: 14px;
+  }
+  .inventory-layers {
+    gap: 5px;
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,658 @@
+[
+  {
+    "file": "postgresql.svg",
+    "name": "PostgreSQL",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/postgresql.svg",
+    "brandSource": "https://wiki.postgresql.org/wiki/Logo",
+    "guidelines": "https://www.postgresql.org/about/policies/trademarks/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "ollama.svg",
+    "name": "Ollama",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/ollama.svg",
+    "brandSource": "https://github.com/ollama/ollama/issues/2152#issuecomment-1905286922",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "caddy.svg",
+    "name": "Caddy",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/caddy.svg",
+    "brandSource": "https://caddyserver.com",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "docker.svg",
+    "name": "Docker",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/docker.svg",
+    "brandSource": "https://www.docker.com/company/newsroom/media-resources",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "nginx.svg",
+    "name": "NGINX",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/nginx.svg",
+    "brandSource": "https://www.nginx.com/press/",
+    "guidelines": "https://www.nginx.com/press/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "qdrant.svg",
+    "name": "Qdrant",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/qdrant.svg",
+    "brandSource": "https://qdrant.tech/img/brand-resources-logos/qdrant-brandmark-white.svg",
+    "guidelines": "https://qdrant.tech/brand-resources/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "grafana.svg",
+    "name": "Grafana",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/grafana.svg",
+    "brandSource": "https://grafana.com",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "ubuntu.svg",
+    "name": "Ubuntu",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/ubuntu.svg",
+    "brandSource": "https://design.ubuntu.com/resources",
+    "guidelines": "https://design.ubuntu.com/brand",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "redis.svg",
+    "name": "Redis",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/redis.svg",
+    "brandSource": "https://redis.io/brand-guidelines",
+    "guidelines": "https://redis.io/brand-guidelines",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "alpinelinux.svg",
+    "name": "Alpine Linux",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/alpinelinux.svg",
+    "brandSource": "https://alpinelinux.org",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata"
+  },
+  {
+    "file": "openwebui.svg",
+    "name": "Open WebUI",
+    "assetSource": "https://raw.githubusercontent.com/open-webui/open-webui/91ea4e3421d1d8069f13d4a463fcb5986d94ea60/static/static/favicon.svg",
+    "brandSource": "https://github.com/open-webui/open-webui",
+    "guidelines": "https://github.com/open-webui/open-webui/blob/91ea4e3421d1d8069f13d4a463fcb5986d94ea60/static/static/BRANDING.md",
+    "collectionLicense": null,
+    "brandLicense": "Open WebUI License (included)",
+    "modification": "None"
+  },
+  {
+    "id": "mysql",
+    "file": "mysql.svg",
+    "name": "MySQL",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/mysql.svg",
+    "brandSource": "https://www.mysql.com/about/legal/logos.html",
+    "guidelines": "https://www.mysql.com/about/legal/logos.html",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/mysql"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/mysql"
+    ]
+  },
+  {
+    "id": "mariadb",
+    "file": "mariadb.svg",
+    "name": "MariaDB",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/mariadb.svg",
+    "brandSource": "https://mariadb.com/about-us/logos/",
+    "guidelines": "https://mariadb.com/about-us/logos/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/mariadb"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/mariadb"
+    ]
+  },
+  {
+    "id": "mongodb",
+    "file": "mongodb.svg",
+    "name": "MongoDB",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/mongodb.svg",
+    "brandSource": "https://www.mongodb.com/pressroom",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/mongo"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/mongo"
+    ]
+  },
+  {
+    "id": "elasticsearch",
+    "file": "elasticsearch.svg",
+    "name": "Elasticsearch",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/elasticsearch.svg",
+    "brandSource": "https://www.elastic.co/brand",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": [
+      "docker.io/library/elasticsearch",
+      "docker.elastic.co/elasticsearch/elasticsearch"
+    ],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/elasticsearch"
+    ]
+  },
+  {
+    "id": "opensearch",
+    "file": "opensearch.svg",
+    "name": "OpenSearch",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/opensearch.svg",
+    "brandSource": "https://opensearch.org/trademark-brand-policy.html",
+    "guidelines": "https://opensearch.org/trademark-brand-policy.html",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": [
+      "docker.io/opensearchproject/opensearch",
+      "docker.io/opensearchproject/opensearch-dashboards"
+    ],
+    "imageDocumentation": [
+      "https://docs.opensearch.org/latest/install-and-configure/install-opensearch/docker/"
+    ]
+  },
+  {
+    "id": "rabbitmq",
+    "file": "rabbitmq.svg",
+    "name": "RabbitMQ",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/rabbitmq.svg",
+    "brandSource": "https://www.rabbitmq.com",
+    "guidelines": "https://www.rabbitmq.com/trademark-guidelines.html",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/rabbitmq"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/rabbitmq"
+    ]
+  },
+  {
+    "id": "minio",
+    "file": "minio.svg",
+    "name": "MinIO",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/minio.svg",
+    "brandSource": "https://min.io",
+    "guidelines": "https://min.io/logo",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["quay.io/minio/minio", "docker.io/minio/minio"],
+    "imageDocumentation": ["https://github.com/minio/minio/blob/master/helm/minio/values.yaml"]
+  },
+  {
+    "id": "traefik",
+    "file": "traefik.svg",
+    "name": "Traefik Proxy",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/traefikproxy.svg",
+    "brandSource": "https://traefik.io/traefik",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/traefik"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/traefik"
+    ]
+  },
+  {
+    "id": "apache",
+    "file": "apache.svg",
+    "name": "Apache",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/apache.svg",
+    "brandSource": "https://www.apache.org/foundation/press/kit",
+    "guidelines": "https://www.apache.org/foundation/marks",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": {
+      "type": "Apache-2.0"
+    },
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/httpd"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/httpd"
+    ]
+  },
+  {
+    "id": "nodejs",
+    "file": "nodejs.svg",
+    "name": "Node.js",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/nodedotjs.svg",
+    "brandSource": "https://nodejs.org/en/about/branding",
+    "guidelines": "https://nodejs.org/en/about/branding",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/node"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/node"
+    ]
+  },
+  {
+    "id": "python",
+    "file": "python.svg",
+    "name": "Python",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/python.svg",
+    "brandSource": "https://www.python.org/community/logos/",
+    "guidelines": "https://www.python.org/community/logos/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/python"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/python"
+    ]
+  },
+  {
+    "id": "php",
+    "file": "php.svg",
+    "name": "PHP",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/php.svg",
+    "brandSource": "https://php.net/download-logos.php",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": {
+      "type": "CC-BY-SA-4.0"
+    },
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/php"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/php"
+    ]
+  },
+  {
+    "id": "wordpress",
+    "file": "wordpress.svg",
+    "name": "WordPress",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/wordpress.svg",
+    "brandSource": "https://wordpress.org/about/logos",
+    "guidelines": "https://wordpressfoundation.org/trademark-policy",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/wordpress"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/wordpress"
+    ]
+  },
+  {
+    "id": "nextcloud",
+    "file": "nextcloud.svg",
+    "name": "Nextcloud",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/nextcloud.svg",
+    "brandSource": "https://nextcloud.com/press/",
+    "guidelines": "https://nextcloud.com/trademarks/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/nextcloud"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/nextcloud"
+    ]
+  },
+  {
+    "id": "homeassistant",
+    "file": "homeassistant.svg",
+    "name": "Home Assistant",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/homeassistant.svg",
+    "brandSource": "https://github.com/home-assistant/assets/blob/0f69676da79c3881e7dfca6d6c0a5739f88273d8/logo/home-assistant-logo.zip",
+    "guidelines": "https://design.home-assistant.io/#brand/logo",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["ghcr.io/home-assistant/home-assistant"],
+    "imageDocumentation": ["https://www.home-assistant.io/installation/linux/"]
+  },
+  {
+    "id": "prometheus",
+    "file": "prometheus.svg",
+    "name": "Prometheus",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/prometheus.svg",
+    "brandSource": "https://prometheus.io",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/prom/prometheus"],
+    "imageDocumentation": ["https://prometheus.io/docs/prometheus/latest/installation/"]
+  },
+  {
+    "id": "portainer",
+    "file": "portainer.svg",
+    "name": "Portainer",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/portainer.svg",
+    "brandSource": "https://www.portainer.io",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/portainer/portainer-ce", "docker.io/portainer/portainer-ee"],
+    "imageDocumentation": [
+      "https://docs.portainer.io/start/install-ce/server/docker/linux",
+      "https://docs.portainer.io/start/install/server/docker/linux"
+    ]
+  },
+  {
+    "id": "gitea",
+    "file": "gitea.svg",
+    "name": "Gitea",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/gitea.svg",
+    "brandSource": "https://github.com/go-gitea/gitea/blob/e0c753e770a64cda5e3900aa1da3d7e1f3263c9a/assets/logo.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.gitea.com/gitea", "docker.io/gitea/gitea"],
+    "imageDocumentation": ["https://docs.gitea.com/installation/install-with-docker/"]
+  },
+  {
+    "id": "gitlab",
+    "file": "gitlab.svg",
+    "name": "GitLab",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/gitlab.svg",
+    "brandSource": "https://about.gitlab.com/press/press-kit/",
+    "guidelines": "https://about.gitlab.com/handbook/marketing/corporate-marketing/brand-activation/trademark-guidelines/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/gitlab/gitlab-ce", "docker.io/gitlab/gitlab-ee"],
+    "imageDocumentation": ["https://docs.gitlab.com/install/docker/installation/"]
+  },
+  {
+    "id": "n8n",
+    "file": "n8n.svg",
+    "name": "n8n",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/n8n.svg",
+    "brandSource": "https://n8n.io/press",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/n8nio/n8n"],
+    "imageDocumentation": [
+      "https://docs.n8n.io/deploy/host-n8n/install-options/install-with-docker.md"
+    ]
+  },
+  {
+    "id": "jellyfin",
+    "file": "jellyfin.svg",
+    "name": "Jellyfin",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/jellyfin.svg",
+    "brandSource": "https://jellyfin.org/docs/general/contributing/branding.html",
+    "guidelines": "https://jellyfin.org/docs/general/contributing/branding.html",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/jellyfin/jellyfin"],
+    "imageDocumentation": ["https://jellyfin.org/docs/general/installation/container/"]
+  },
+  {
+    "id": "plex",
+    "file": "plex.svg",
+    "name": "Plex",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/plex.svg",
+    "brandSource": "https://brand.plex.tv",
+    "guidelines": "https://brand.plex.tv",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/plexinc/pms-docker"],
+    "imageDocumentation": ["https://github.com/plexinc/pms-docker/blob/master/README.md"]
+  },
+  {
+    "id": "adguard",
+    "file": "adguard.svg",
+    "name": "AdGuard",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/adguard.svg",
+    "brandSource": "https://adguard.com/en/media-materials.html",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/adguard/adguardhome"],
+    "imageDocumentation": ["https://github.com/AdguardTeam/AdGuardHome/wiki/Docker"]
+  },
+  {
+    "id": "pihole",
+    "file": "pihole.svg",
+    "name": "Pi-hole",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/pihole.svg",
+    "brandSource": "https://docs.pi-hole.net",
+    "guidelines": "https://pi-hole.net/trademark-rules-and-brand-guidelines/",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/pihole/pihole"],
+    "imageDocumentation": ["https://github.com/pi-hole/docker-pi-hole/blob/master/README.md"]
+  },
+  {
+    "id": "mosquitto",
+    "file": "mosquitto.svg",
+    "name": "Eclipse Mosquitto",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/eclipsemosquitto.svg",
+    "brandSource": "https://github.com/eclipse/mosquitto/blob/75fc908bba90d4bd06e85efc1c4ed77952ec842c/logo/mosquitto-logo-only.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/library/eclipse-mosquitto"],
+    "imageDocumentation": [
+      "https://github.com/docker-library/official-images/blob/master/library/eclipse-mosquitto"
+    ]
+  },
+  {
+    "id": "vault",
+    "file": "vault.svg",
+    "name": "Vault",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/vault.svg",
+    "brandSource": "https://www.hashicorp.com/brand",
+    "guidelines": "https://www.hashicorp.com/brand",
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "None; retained the original monochrome black SVG for contrast on the light canvas",
+    "imageRepositories": ["docker.io/hashicorp/vault"],
+    "imageDocumentation": ["https://developer.hashicorp.com/vault/install"]
+  },
+  {
+    "id": "keycloak",
+    "file": "keycloak.svg",
+    "name": "Keycloak",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/keycloak.svg",
+    "brandSource": "https://github.com/keycloak/keycloak-misc/blob/dee033f2d6d6b5c3a6ce8eb84e285f7e5626dbf6/logo/icon-black.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": {
+      "type": "custom",
+      "url": "https://www.linuxfoundation.org/legal/trademark-usage"
+    },
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["quay.io/keycloak/keycloak"],
+    "imageDocumentation": ["https://www.keycloak.org/server/containers"]
+  },
+  {
+    "id": "authentik",
+    "file": "authentik.svg",
+    "name": "Authentik",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/authentik.svg",
+    "brandSource": "https://github.com/goauthentik/authentik/blob/2c64f72ebc57dad9789c1fb799dd7cd39003d043/web/icons/icon.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["ghcr.io/goauthentik/server"],
+    "imageDocumentation": ["https://docs.goauthentik.io/install-config/air-gapped"]
+  },
+  {
+    "id": "immich",
+    "file": "immich.svg",
+    "name": "Immich",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/immich.svg",
+    "brandSource": "https://github.com/immich-app/immich/blob/25c9b779e4d19bc34551f8b137266a459e0d70e1/design/immich-logo.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": [
+      "ghcr.io/immich-app/immich-server",
+      "ghcr.io/immich-app/immich-machine-learning"
+    ],
+    "imageDocumentation": [
+      "https://github.com/immich-app/immich/blob/main/docker/docker-compose.yml"
+    ]
+  },
+  {
+    "id": "uptimekuma",
+    "file": "uptimekuma.svg",
+    "name": "Uptime Kuma",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/uptimekuma.svg",
+    "brandSource": "https://uptime.kuma.pet",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/louislam/uptime-kuma"],
+    "imageDocumentation": ["https://github.com/louislam/uptime-kuma/blob/master/README.md"]
+  },
+  {
+    "id": "meilisearch",
+    "file": "meilisearch.svg",
+    "name": "Meilisearch",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/meilisearch.svg",
+    "brandSource": "https://www.meilisearch.com",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/getmeili/meilisearch"],
+    "imageDocumentation": [
+      "https://www.meilisearch.com/docs/learn/self_hosted/install_meilisearch_locally"
+    ]
+  },
+  {
+    "id": "syncthing",
+    "file": "syncthing.svg",
+    "name": "Syncthing",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/syncthing.svg",
+    "brandSource": "https://github.com/syncthing/syncthing/blob/bdfd0f0548d2f6fc4b5500690dbd383baa3b0561/assets/logo-only.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["docker.io/syncthing/syncthing"],
+    "imageDocumentation": ["https://github.com/syncthing/syncthing/blob/main/README-Docker.md"]
+  },
+  {
+    "id": "lmstudio",
+    "file": "lmstudio.svg",
+    "name": "LM Studio",
+    "assetSource": "https://raw.githubusercontent.com/simple-icons/simple-icons/c71c69e3a27e4436936b831c72643e6513b9f49b/icons/lmstudio.svg",
+    "brandSource": "https://files.lmstudio.ai/lmstudio_icon2.svg",
+    "guidelines": null,
+    "collectionLicense": "CC0-1.0",
+    "brandLicense": null,
+    "modification": "Added official brand hex color from Simple Icons metadata",
+    "imageRepositories": ["lscr.io/linuxserver/lm-studio"],
+    "imageDocumentation": ["https://docs.linuxserver.io/images/docker-lm-studio/"]
+  },
+  {
+    "id": "chroma",
+    "file": "chroma.svg",
+    "name": "Chroma",
+    "assetSource": "https://raw.githubusercontent.com/chroma-core/chroma/ddc17cd7c508f15f237c965e74e536ff64396ddb/docs/mintlify/images/favicon.svg",
+    "brandSource": "https://github.com/chroma-core/chroma",
+    "guidelines": null,
+    "collectionLicense": null,
+    "brandLicense": {
+      "url": "https://raw.githubusercontent.com/chroma-core/chroma/ddc17cd7c508f15f237c965e74e536ff64396ddb/LICENSE",
+      "type": "Apache-2.0"
+    },
+    "modification": "None",
+    "imageRepositories": ["docker.io/chromadb/chroma"],
+    "imageDocumentation": ["https://docs.trychroma.com/deployment/docker"]
+  },
+  {
+    "id": "litellm",
+    "file": "litellm.svg",
+    "name": "LiteLLM",
+    "assetSource": "https://raw.githubusercontent.com/BerriAI/litellm/6e148255d921de26381aed7fa199af0e68bd5bb6/ui/litellm-dashboard/public/assets/logos/litellm_monogram.svg",
+    "brandSource": "https://github.com/BerriAI/litellm",
+    "guidelines": null,
+    "collectionLicense": null,
+    "brandLicense": {
+      "url": "https://raw.githubusercontent.com/BerriAI/litellm/6e148255d921de26381aed7fa199af0e68bd5bb6/LICENSE",
+      "type": "MIT (outside enterprise directory)"
+    },
+    "modification": "None",
+    "imageRepositories": ["ghcr.io/berriai/litellm", "docker.litellm.ai/berriai/litellm"],
+    "imageDocumentation": ["https://docs.litellm.ai/docs/proxy/deploy"]
+  },
+  {
+    "id": "localai",
+    "file": "localai.svg",
+    "name": "LocalAI",
+    "assetSource": "https://raw.githubusercontent.com/mudler/LocalAI/ae8092e1c6932a63f1499d28cf58cf7ab0545628/docs/static/favicon.svg",
+    "brandSource": "https://github.com/mudler/LocalAI",
+    "guidelines": null,
+    "collectionLicense": null,
+    "brandLicense": {
+      "url": "https://raw.githubusercontent.com/mudler/LocalAI/ae8092e1c6932a63f1499d28cf58cf7ab0545628/LICENSE",
+      "type": "MIT"
+    },
+    "modification": "None",
+    "imageRepositories": ["docker.io/localai/localai", "quay.io/go-skynet/local-ai"],
+    "imageDocumentation": ["https://localai.io/docs/getting-started/index.print.html"]
+  },
+  {
+    "id": "llamacpp",
+    "file": "llamacpp.svg",
+    "name": "llama.cpp",
+    "assetSource": "https://raw.githubusercontent.com/ggml-org/llama.cpp/1b29621bacc6a446bd523fc790316a24a06e886f/media/llama1-icon-transparent.svg",
+    "brandSource": "https://github.com/ggml-org/llama.cpp",
+    "guidelines": null,
+    "collectionLicense": null,
+    "brandLicense": {
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/1b29621bacc6a446bd523fc790316a24a06e886f/LICENSE",
+      "type": "MIT"
+    },
+    "modification": "None",
+    "imageRepositories": ["ghcr.io/ggml-org/llama.cpp"],
+    "imageDocumentation": ["https://github.com/ggml-org/llama.cpp/blob/master/docs/docker.md"]
+  }
+]

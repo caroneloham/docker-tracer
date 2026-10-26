@@ -1,0 +1,43 @@
+THIRD-PARTY NOTICES — Docker Tracer 0.12.1
+
+Node.js 24.14.0 (runtime Windows x64)
+  Copyright Node.js contributors. Node.js est distribué selon sa licence MIT
+  et les notices de ses composants. Texte complet : runtime/NODE-LICENSE.txt.
+  Source : https://nodejs.org/dist/v24.14.0/
+
+Dépendances JavaScript
+  Les paquets de production installés dans node_modules conservent leurs
+  propres fichiers LICENSE et leurs notices. Leur nom et leur version exacte
+  figurent dans package-lock.json. Les principaux composants sont React,
+  React Flow (@xyflow/react), Express, Dockerode, SSH2, YAML, Zod et xterm.
+
+Logos d'applications dans l'interface (48 marques incluses)
+  Leur rôle est d'identifier les logiciels représentés sur la carte, sans
+  suggérer une approbation par leurs titulaires. La provenance exacte, les
+  liens vers les politiques de marque et les modifications sont détaillés
+  dans notices/brands/sources.json. Les licences disponibles sont copiées
+  dans notices/brands/LICENSE-*.txt.
+
+  - La plupart des pictogrammes proviennent de Simple Icons, collection
+    CC0-1.0. Les marques elles-mêmes peuvent être protégées et conservent
+    leurs titulaires. Voir LICENSE-simple-icons.txt et sources.json.
+  - Le logo PHP provient de PHP Group via Simple Icons et est soumis à
+    CC-BY-SA-4.0 ; sa couleur a été adaptée selon les métadonnées officielles.
+    Voir LICENSE-php-CC-BY-SA-4.0.txt.
+  - La plume Apache est soumise à Apache-2.0. Voir LICENSE-apache-2.0.txt.
+  - Le favicon Open WebUI est fourni par le projet Open WebUI, sans
+    modification. Sa licence complète et son attribution figurent dans
+    LICENSE-openwebui.txt ; source et révision dans sources.json. Le logo
+    identifie Open WebUI et ne sert pas de marque à Docker Tracer.
+  - Les ressources Chroma, LiteLLM, LocalAI et llama.cpp viennent des projets
+    correspondants ; leurs licences sont incluses dans notices/brands/.
+  - Le logo Keycloak reste soumis à la politique de marque de la Linux
+    Foundation, mentionnée dans sources.json.
+
+  Les logos vLLM et Hugging Face ne sont pas distribués dans cette archive.
+
+Docker Tracer
+  Le code propre à Docker Tracer est soumis à la licence fournie dans
+  LICENSE : usage professionnel, modification et vente des infrastructures
+  produites autorisés ; vente du logiciel ou de son accès payant interdite.
+  Cette licence de code source accessible n'est pas une licence OSI.

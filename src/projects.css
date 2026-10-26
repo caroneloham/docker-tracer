@@ -1,0 +1,136 @@
+.project-backdrop {
+  z-index: 3000;
+}
+.project-manager .project-list-heading label {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  white-space: nowrap;
+  gap: 6px;
+  margin: 0;
+}
+.project-manager input[type='checkbox'] {
+  width: auto;
+  margin: 0;
+}
+.project-manager {
+  width: min(850px, 94vw);
+  max-height: 90vh;
+  overflow: auto;
+  padding: 22px;
+  background: #fafbfc;
+  color: #263b4a;
+}
+.project-heading,
+.project-list-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+}
+.project-heading h2,
+.project-create h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 8px;
+}
+.project-heading p,
+.project-hint {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #526570;
+}
+.project-create {
+  border: 1px solid #bbc9d2;
+  background: #eef3f7;
+  padding: 16px;
+  margin: 18px 0;
+}
+.project-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.project-form-grid label {
+  display: grid;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.project-form-grid input,
+.project-form-grid select {
+  width: 100%;
+  padding: 8px;
+  background: white;
+  border: 1px solid #aabac5;
+  font: inherit;
+  box-sizing: border-box;
+}
+.project-list-heading label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 12px;
+}
+.project-list {
+  display: grid;
+  gap: 8px;
+}
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #ccd4dc;
+  background: white;
+}
+.project-row.current {
+  border-left: 4px solid #246aa5;
+}
+.project-row span,
+.project-row small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #526570;
+}
+.project-row-actions {
+  display: flex;
+  gap: 5px;
+}
+.project-manager button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+}
+.project-error {
+  padding: 10px;
+  background: #fff1e8;
+  color: #8f391a;
+  border: 1px solid #e3b08f;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.project-error button {
+  margin-left: 10px;
+}
+.project-discard {
+  padding: 20px 0;
+}
+.project-discard button {
+  margin-right: 10px;
+}
+@media (max-width: 650px) {
+  .project-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,141 @@
+.container-resources,
+.compose-resources {
+  display: grid;
+  gap: 14px;
+  min-width: 0;
+}
+.container-resources > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.container-resources h3,
+.resource-gpu h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.resource-hardware {
+  padding: 12px;
+  background: #f3f7fa;
+  border: 1px solid #c4d5df;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+}
+.resource-capacities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.resource-capacities span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.resource-allocation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.resource-allocation-grid label {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+}
+.resource-allocation-grid select,
+.resource-number input,
+.resource-gpu > label > input[type='text'] {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 6px 9px;
+}
+.resource-number {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.resource-actions button {
+  min-height: 34px;
+}
+.resource-usage {
+  margin: 0;
+  color: #476176;
+  font-size: 13px;
+}
+.resource-error,
+.resource-success {
+  padding: 10px;
+  margin: 0;
+  border-left: 3px solid #ba4337;
+  background: #fff2ef;
+}
+.resource-success {
+  border-color: #178263;
+  background: #effaf5;
+}
+.resource-confirm {
+  padding: 14px;
+  border: 1px solid #6ea391;
+  background: #f2faf6;
+  display: grid;
+  gap: 10px;
+}
+.resource-confirm p {
+  margin: 0;
+}
+.resource-gpu {
+  border-top: 1px solid #ccd8e0;
+  padding-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+.resource-gpu p {
+  margin: 0;
+  font-size: 13px;
+}
+.resource-gpu-card {
+  border: 1px solid #ccd8e0;
+  padding: 10px;
+  border-radius: 5px;
+  display: grid;
+  gap: 5px;
+  overflow-wrap: anywhere;
+}
+.resource-gpu-card label {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+}
+.resource-gpu input[type='checkbox'] {
+  width: auto;
+  height: auto;
+  margin-top: 3px;
+}
+.resource-gpu small,
+.resource-confirm small,
+.resource-hardware small {
+  display: block;
+  color: #4c697d;
+}
+.resource-gpu details {
+  font-size: 12px;
+  color: #4c697d;
+}
+.resource-gpu details p {
+  padding-top: 8px;
+}
+@media (max-width: 620px) {
+  .resource-allocation-grid {
+    grid-template-columns: 1fr;
+  }
+}

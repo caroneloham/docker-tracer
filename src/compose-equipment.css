@@ -1,0 +1,94 @@
+.compose-equipment-palette {
+  gap: 10px 20px;
+}
+.compose-equipment-palette button[draggable='true'] {
+  cursor: grab;
+}
+.compose-equipment-palette button[draggable='true']:active {
+  cursor: grabbing;
+}
+.compose-palette-drag-hint {
+  color: #506674;
+  font-size: 11px;
+}
+.compose-equipment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.compose-equipment-palette .compose-equipment-actions button {
+  min-height: 64px;
+  height: auto;
+  justify-content: flex-start;
+  padding: 7px 12px;
+  gap: 10px;
+  background: #f8fafb;
+  border: 1px solid #94a9b8;
+  border-radius: 4px;
+}
+.compose-equipment-actions button > span {
+  display: grid;
+  gap: 3px;
+  text-align: left;
+}
+.compose-equipment-actions strong {
+  font-size: 13px;
+}
+.compose-equipment-actions small {
+  color: #506674;
+}
+.compose-equipment-palette .compose-equipment-actions .equipment-icon {
+  display: block;
+  width: 43px;
+  height: 39px;
+}
+.compose-equipment-form fieldset {
+  display: grid;
+  gap: 12px;
+}
+.compose-equipment-form p {
+  margin: 0;
+}
+.compose-router-networks {
+  display: grid;
+  gap: 8px;
+  max-height: 260px;
+  overflow: auto;
+}
+.compose-router-interface,
+.compose-router-details {
+  display: grid;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid #bac9d2;
+  background: #f4f7f9;
+  border-radius: 4px;
+}
+.compose-router-interface label {
+  margin: 0;
+}
+.compose-router-interface small {
+  color: #506674;
+}
+.compose-router-details code {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .compose-equipment-actions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .compose-equipment-palette > fieldset {
+    width: 100%;
+  }
+  .compose-equipment-palette .compose-equipment-actions button {
+    flex-direction: column;
+    padding: 7px 4px;
+  }
+  .compose-equipment-actions button > span {
+    text-align: center;
+  }
+  .compose-equipment-actions button > svg:last-child {
+    display: none;
+  }
+}

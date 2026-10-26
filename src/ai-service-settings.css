@@ -1,0 +1,336 @@
+.compose-ai-maintenance-panel {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 22px;
+  background: #edf2f6;
+}
+.compose-workspace .compose-inspector .compose-ai-shortcut {
+  background: #eaf3fa;
+  border-color: #b8d2e4;
+  color: #24658f;
+}
+.ai-service-settings {
+  max-width: 940px;
+  margin: 0 auto;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.ai-service-breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 15px;
+}
+.ai-service-breadcrumb > button {
+  border: 0;
+  background: transparent;
+  color: #38627e;
+  padding-left: 0;
+}
+.compose-workspace .ai-service-breadcrumb label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  white-space: nowrap;
+}
+.ai-service-breadcrumb select {
+  max-width: 320px;
+}
+.ai-service-card {
+  border: 1px solid #c3d2dd;
+  border-radius: 9px;
+  background: white;
+  box-shadow: 0 3px 12px #15364e08;
+  overflow: hidden;
+}
+.ai-service-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 25px 28px;
+}
+.ai-service-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+.ai-service-identity > div:last-child {
+  min-width: 0;
+}
+.ai-service-symbol {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 9px;
+  background: #e9f2f9;
+  color: #246997;
+}
+.ai-service-symbol .equipment-icon {
+  width: 33px;
+  height: 33px;
+}
+.ai-service-engine {
+  display: block;
+  color: #5e7586;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ai-service-header h2 {
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1d3d55;
+  margin: 3px 0 5px;
+  overflow-wrap: anywhere;
+}
+.ai-service-header code {
+  display: block;
+  overflow-wrap: anywhere;
+  color: #557083;
+  font-size: 11px;
+}
+.ai-service-header a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  margin-top: 5px;
+  color: #326b93;
+  font-size: 12px;
+  text-decoration: none;
+}
+.ai-service-header a:hover {
+  text-decoration: underline;
+}
+.ai-service-tabs {
+  display: flex;
+  border-bottom: 1px solid #cfdae2;
+  padding: 0 28px;
+  gap: 25px;
+}
+.compose-workspace .ai-service-tabs button {
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  color: #607689;
+  background: transparent;
+  padding: 11px 3px;
+  min-height: 42px;
+}
+.compose-workspace .ai-service-tabs button[aria-pressed='true'] {
+  border-bottom-color: #287db2;
+  color: #185f8e;
+  font-weight: 600;
+}
+.compose-workspace fieldset.ai-service-content {
+  padding: 24px 28px;
+}
+.ai-service-content [hidden] {
+  display: none;
+}
+.ai-service-section-heading {
+  margin-bottom: 22px;
+}
+.ai-service-section-heading h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #213e55;
+  margin: 0 0 5px;
+}
+.ai-service-section-heading p,
+.ai-service-empty {
+  margin: 0;
+  color: #627888;
+  font-size: 12px;
+}
+.ai-service-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+.ai-service-fields:empty {
+  display: none;
+}
+.compose-workspace .ai-service-field label {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 7px;
+  margin: 0 0 7px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.compose-workspace .ai-service-field input {
+  min-height: 39px;
+  padding: 8px 10px;
+  border-color: #b5c6d2;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.ai-service-field input::placeholder {
+  color: #7a8e9c;
+  font-size: 12px;
+}
+.ai-service-field.is-readonly input {
+  background: #f1f5f8;
+  color: #587181;
+}
+.ai-service-readonly {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  color: #718594;
+  font-size: 10px;
+  font-weight: 400;
+}
+.ai-service-field-hint {
+  display: block;
+  margin-top: 6px;
+  color: #657c8d;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+.ai-service-inventory {
+  color: #6b8090;
+  font-size: 11px;
+  margin: 21px 0 0;
+}
+.ai-service-advanced {
+  margin-top: 22px;
+  border-top: 1px solid #dfe7ed;
+  padding-top: 16px;
+}
+.ai-service-advanced:first-child {
+  margin-top: 0;
+}
+.ai-service-advanced summary {
+  cursor: pointer;
+  color: #476780;
+  font-weight: 600;
+}
+.ai-service-advanced[open] summary {
+  margin-bottom: 18px;
+}
+.ai-service-form-footer {
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #e0e7ed;
+}
+.ai-service-form-footer > small {
+  display: block;
+  color: #6b8090;
+  font-size: 11px;
+  margin-bottom: 13px;
+}
+.ai-service-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.compose-workspace .ai-service-settings button {
+  min-height: 35px;
+}
+.compose-workspace .ai-service-save {
+  background: #246f9f;
+  border: 1px solid #246f9f;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 13px;
+}
+.compose-workspace .ai-service-save:disabled {
+  background: #dae5ed;
+  border-color: #dae5ed;
+  color: #6d8292;
+  opacity: 1;
+}
+.compose-workspace .ai-service-source {
+  border: 0;
+  background: transparent;
+  color: #476d88;
+  margin-left: auto;
+}
+.ai-service-settings :is(button, a, input, select, summary):focus-visible {
+  outline: 2px solid #2782bb;
+  outline-offset: 3px;
+}
+.ai-service-error,
+.ai-service-success {
+  padding: 10px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin: 0 0 14px;
+}
+.ai-service-error {
+  background: #fff0ec;
+  color: #984331;
+}
+.ai-service-success {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: #eef7f4;
+  color: #2d745c;
+}
+.ai-service-success svg {
+  flex: 0 0 auto;
+}
+.ai-service-content .compose-resources > button {
+  justify-self: start;
+}
+.ai-service-content .resource-capacities {
+  gap: 20px;
+}
+.ai-service-content .resource-hardware {
+  background: #f5f8fa;
+  border-color: #d3e0e9;
+}
+@media (max-width: 640px) {
+  .compose-ai-maintenance-panel {
+    padding: 12px;
+  }
+  .ai-service-breadcrumb {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ai-service-breadcrumb > button {
+    align-self: flex-start;
+  }
+  .ai-service-breadcrumb select {
+    max-width: none;
+  }
+  .ai-service-header {
+    padding: 20px 18px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .ai-service-header a {
+    margin-left: 62px;
+  }
+  .ai-service-header h2 {
+    font-size: 21px;
+  }
+  .ai-service-tabs {
+    padding: 0 18px;
+    gap: 24px;
+  }
+  .compose-workspace fieldset.ai-service-content {
+    padding: 20px 18px;
+  }
+  .ai-service-fields {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .compose-workspace .ai-service-source {
+    margin-left: 0;
+  }
+}
