@@ -71,7 +71,7 @@ import {
 } from '../shared/compose-project.mjs';
 import './compose.css';
 import './browser.css';
-import { BROWSER_MODE, LOCAL_APP_URL } from './browser-mode.js';
+import { BROWSER_MODE } from './browser-mode.js';
 import { AUTODOCKER_LOGO_URL } from './autodocker-logo.js';
 import BrowserDownloads from './BrowserDownloads.jsx';
 import './compose-connections.css';

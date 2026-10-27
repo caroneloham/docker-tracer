@@ -47,11 +47,7 @@
   padding-block: 0;
 }
 
-.browser-downloads { position:relative; }
-.browser-downloads summary { cursor:pointer;border:1px solid currentColor;border-radius:5px;padding:4px 8px;white-space:nowrap; }
-.browser-download-menu { position:absolute;right:0;top:calc(100% + 6px);z-index:220;min-width:180px;padding:5px;border:1px solid #91aabc;border-radius:5px;background:#f6fafc;color:#173d55;box-shadow:0 6px 20px #0002; }
-.browser-header-links .browser-download-menu a { display:block;margin:3px;border:0;padding:9px 12px;color:#173d55; }
-.browser-header-links .browser-download-menu a:hover { background:#e3eef5; }
+.browser-downloads { display:inline-flex;align-items:center;cursor:pointer;border:1px solid currentColor;border-radius:5px;padding:4px 8px;white-space:nowrap;color:inherit;text-decoration:none; }
 
 .app.browser-mode .window-title {
   min-height: 32px;

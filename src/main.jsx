@@ -92,7 +92,7 @@ import { PacketComposer, PacketInspector, ProbeHistory } from './Packets.jsx';
 import EquipmentTemplates from './EquipmentTemplates.jsx';
 import { WorkspaceModal } from './WorkspacePanels.jsx';
 import { loadEquipmentTemplates, templateStorageKey } from '../shared/templates.mjs';
-import { BROWSER_MODE, LOCAL_APP_URL } from './browser-mode.js';
+import { BROWSER_MODE } from './browser-mode.js';
 import { AUTODOCKER_LOGO_URL } from './autodocker-logo.js';
 import BrowserDownloads from './BrowserDownloads.jsx';
 
