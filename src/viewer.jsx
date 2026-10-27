@@ -121,7 +121,7 @@ function App() {
           <p>Cette page affiche les services et les réseaux déclarés dans votre fichier, directement dans le navigateur. Pour travailler avec vos conteneurs, lancez l’application Docker Tracer en local.</p>
         </div>
         <div className="viewer-download">
-          <a href="/essai/downloads/Docker-Tracer-0.12.2-Windows-x64.zip" download><Download size={18} aria-hidden="true" /> Télécharger Docker Tracer</a>
+          <a href="https://github.com/caroneloham/docker-tracer" target="_blank" rel="noopener noreferrer"><Download size={18} aria-hidden="true" /> Télécharger Docker Tracer</a>
           <small>Application complète · Windows x64</small>
         </div>
       </div>
