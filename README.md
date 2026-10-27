@@ -58,6 +58,8 @@ Les [instructions Windows](packaging/README.md) et [Linux](packaging/README-Linu
 
 ## Documentation
 
+- [Dépannage : erreurs courantes et solutions](docs/Depannage.md).
+
 - [Wiki : installation et utilisation](https://github.com/caroneloham/docker-tracer/wiki).
 
 - [Développer, construire les archives et lancer les tests](docs/Developper.md).
