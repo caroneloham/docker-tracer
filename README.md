@@ -58,8 +58,10 @@ Les [instructions Windows](packaging/README.md) et [Linux](packaging/README-Linu
 
 ## Documentation
 
+- [Wiki : installation et utilisation](https://github.com/caroneloham/docker-tracer/wiki).
+
 - [Développer, construire les archives et lancer les tests](docs/Developper.md).
-- [Périmètre des vérifications](VERIFICATION.md).
+- [Périmètre des vérifications](VERIFICATION.md) · [Politique de sécurité et signalement privé](SECURITY.md).
 - [Licences des composants tiers](THIRD_PARTY_NOTICES.txt) · [Provenance des logos](src/assets/brands/README.md).
 
 Un problème ou une idée ? [Ouvrir une issue](https://github.com/caroneloham/docker-tracer/issues).
